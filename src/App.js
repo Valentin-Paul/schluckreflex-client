@@ -8,6 +8,9 @@ import * as USER_HELPERS from "./utils/userToken";
 
 
 import Homepage from './pages/HomePage'
+import CreateRecipes from "./pages/CreateRecipes";
+
+
 
 export default function App() {
   const [user, setUser] = useState(null);
@@ -61,6 +64,7 @@ export default function App() {
         ))}
 
         <Route path="/" element={<Homepage />} />
+        <Route path="/postrecipe" element={<CreateRecipes />} />
         
       </Routes>
     </div>
