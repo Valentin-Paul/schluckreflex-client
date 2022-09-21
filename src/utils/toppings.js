@@ -1,0 +1,1 @@
+export const toppings = ["dinner", "breakfast", "lunch"]
