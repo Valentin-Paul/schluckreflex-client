@@ -2,6 +2,7 @@
 import { useState } from "react"
 import axios from "axios"
 import { toppings } from "../utils/toppings"
+import "./css/createRecipe.css"
 
 function CreateRecipes() {
 
@@ -17,12 +18,6 @@ function CreateRecipes() {
 
     const handlePostSubmit = ((e) => {
         e.preventDefault()
-
-        // checkedTag.map((tag, index)=>{
-        //     if (tag === true){
-        //         tags.push(toppings[index])
-        //     }
-        // })
 
         const requestBody = [recipeName, ingredientes, description, checkedTag]
         console.log(requestBody)
@@ -56,13 +51,7 @@ function CreateRecipes() {
         console.log(checkedTag)
     }
 
-    // let handleOnChange = (position) => {
-    //     const updatedCheckedTag = checkedTag.map((item, index) =>
-    //     index === position ? !item : item
-    //     );
-
-    //     setCheckedTag(updatedCheckedTag);
-    // }
+   
     let handleChangeIngrediente = (i, e) => {
         let newIngrediente = [...ingredientes];
         newIngrediente[i][e.target.name] = e.target.value;
@@ -79,15 +68,9 @@ function CreateRecipes() {
         setIngredientes(newIngrediente)
     }
 
-    function checkValue(e) {
-        setTags([...tags, e.target.value]) 
-        // console.log("You selected " + value);
-      }
+
     
-    // let handleSubmit = (event) => {
-    //     event.preventDefault();
-    //     alert(JSON.stringify(ingredientes));
-    // }
+ 
 
 
     return(
@@ -115,7 +98,7 @@ function CreateRecipes() {
                   </>
                 : null
               }
-              <button className="button submit" type="submit">Submit</button>
+             
               </div>
         )})}
 
@@ -148,36 +131,9 @@ function CreateRecipes() {
           );
         })}
 
-{/* <input>
-type="checkbox" 
-value={"dinner"} 
-name="dinner" 
-checked={checkedState[index]}
-onChange={() => handleOnChange(index)}
-</input>
+        <button className="button submit" type="submit">Submit</button>
 
-<label>Dinner</label>
-<input type="checkbox" value="breakfast" name="breackfast" onChange={e=>{checkValue(e)}}></input>
-<label>Breakfast</label> */}
-
-              {/* <form>
-              <label>Tags</label>
-              <input type="checkbox" value="Frühstück" name="tags" id="Frühstück"> Frühstück </input>
-              <input type="checkbox" value="Mittag" name="tags" id="Mittag"> Mittag </input>
-              <input type="checkbox" value="Dinner" name="tags" id="Dinner">  </input>
-              <input type="checkbox" value="Snacks" name="tags" id="Snacks">  </input>
-</form> */}
-{/* {tags.map((element, index)=>{
-    return(
-        <div className="tag-box">
-        <label>tags: </label>
-            <input type="text" name="tags" value={element[0]} onChange={e => handleChangeTags(index, e)}></input>
-            <br></br>
-        </div>
-    )
-})} */}
             
-         
         </form>
 
         </div>
