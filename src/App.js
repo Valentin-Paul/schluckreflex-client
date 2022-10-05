@@ -5,22 +5,39 @@ import Navbar from "./components/Navbar/Navbar";
 import { getLoggedIn, logout } from "./services/auth";
 import routes from "./config/routes";
 import * as USER_HELPERS from "./utils/userToken";
+import axios from "axios";
 
 
 import Homepage from './pages/HomePage'
 import CreateRecipes from "./pages/CreateRecipes";
+import AllRecipes from "./pages/AllRecipes"
 
 
 
 export default function App() {
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [recipes, setRecipes] = useState([])
+
+  const fetchRecipes = ()=>{
+    axios
+      .get(`${process.env.REACT_APP_SERVER_URL}/recipes`)
+      .then((response)=>{
+        setRecipes(response.data)
+      })
+      .catch((e)=>{console.log("error getting recipes from API ->>>", e)})
+  }
+
 
   useEffect(() => {
+
+    fetchRecipes();
+
     const accessToken = USER_HELPERS.getUserToken();
     if (!accessToken) {
       return setIsLoading(false);
     }
+
     getLoggedIn(accessToken).then((res) => {
       if (!res.status) {
         return setIsLoading(false);
@@ -28,6 +45,7 @@ export default function App() {
       setUser(res.data.user);
       setIsLoading(false);
     });
+
   }, []);
 
   function handleLogout() {
@@ -55,6 +73,11 @@ export default function App() {
   if (isLoading) {
     return <LoadingComponent />;
   }
+
+
+  
+
+
   return (
     <div className="App">
       <Navbar handleLogout={handleLogout} user={user} />
@@ -65,6 +88,9 @@ export default function App() {
 
         <Route path="/" element={<Homepage />} />
         <Route path="/postrecipe" element={<CreateRecipes />} />
+        <Route path="recipes" element={<AllRecipes recipes={recipes} callbackFetch={fetchRecipes
+        
+        }/>} />
         
       </Routes>
     </div>
