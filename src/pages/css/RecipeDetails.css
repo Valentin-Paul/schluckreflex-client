@@ -1,0 +1,28 @@
+.section-ingredientes{
+    padding-top: 1rem !important;
+    margin-top: 0;
+}
+
+.ingrediente-line{
+    display: flex;
+    flex-direction:column;
+    flex-wrap: nowrap;
+    margin: 0rem 1rem 0rem 0rem;
+}
+
+.ingrediente-details{
+    display: flex;
+}
+
+.zutaten{
+    font-weight: 200;
+}
+
+.hr{
+    padding: 0;
+    margin: 0.5rem;
+}
+
+.ingrediente-line-left{
+    margin-left: 3vw;
+}
