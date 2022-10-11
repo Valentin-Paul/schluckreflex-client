@@ -11,6 +11,7 @@ import axios from "axios";
 import Homepage from './pages/HomePage'
 import CreateRecipes from "./pages/CreateRecipes";
 import AllRecipes from "./pages/AllRecipes"
+import RecipeDetails from "./pages/RecipeDetails";
 
 
 
@@ -88,10 +89,9 @@ export default function App() {
 
         <Route path="/" element={<Homepage />} />
         <Route path="/postrecipe" element={<CreateRecipes />} />
-        <Route path="recipes" element={<AllRecipes recipes={recipes} callbackFetch={fetchRecipes
-        
-        }/>} />
-        
+        <Route path="recipes" element={<AllRecipes recipes={recipes} callbackFetch={fetchRecipes}/>} />
+        <Route path="recipes/:recipeId" element={<RecipeDetails/>}/>
+
       </Routes>
     </div>
   );
