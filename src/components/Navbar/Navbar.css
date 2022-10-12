@@ -4,7 +4,6 @@
 
 nav {
   display: flex;
-  padding: 1em;
   justify-content: space-evenly;
   flex-wrap: wrap;
   background:teal;
@@ -13,7 +12,7 @@ nav {
 }
 
 .navbar {
-  height: 5rem !important;
+  height: 3.5rem !important;
   min-height: unset !important;
   background-color: teal;
 }
@@ -22,13 +21,13 @@ nav {
   /* width: auto !important; */
   text-align: center;
   align-items: space-around;
-  font-size: 1.1rem;
-  font-weight: 400;
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 
 
 .navbar-rezepte{
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: white;
   font-weight: 300;
 }
@@ -83,3 +82,6 @@ nav {
   background-color: #d13e3e;
 }
 
+.navbar-menu{
+  align-content: center !important;
+}
