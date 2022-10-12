@@ -8,7 +8,7 @@ function CreateRecipes() {
 
     const[recipeName, setRecipeName] = useState('')
     const[ingredientes, setIngredientes] = useState([{amount: '', ingrediente: ''}])
-    const[description, setDescription] = useState('')
+    const[description, setDescription] = useState([])
     const[tags, setTags] = useState([])
     const[errorMessage, setErrorMessage] = useState(undefined);
     const [checkedTag, setCheckedTag] = useState([]
@@ -69,6 +69,24 @@ function CreateRecipes() {
     }
 
 
+    let handleChangeDescription = (i, e) => {
+
+      let newDescription = [...description];
+      newDescription[i] = e.target.value;
+      setDescription(newDescription);
+      console.log(description)
+    }
+
+    let addDescriptionField = () => {
+      setDescription([...description, []])
+    }
+
+    let removeDescriptionField = (i) => {
+      let newDescription = [...description];
+      newDescription.splice(i, 1);
+      setDescription(newDescription)
+  }
+
     
  
 
@@ -106,8 +124,30 @@ function CreateRecipes() {
               <button className="button add" type="button" onClick={() => addIngredienteField()}>Add</button>
           </div>
 
-          <label>Description: </label>
-            <input type="text" name="description" value={description} onChange={e=> setDescription(e.target.value)}></input>
+              {description.map((step, index)=>{
+                return(
+                  <>
+                 
+                <label>Schritt {index + 1}: </label>
+            <input type="text" name="description" value={step || ""} onChange={e=> handleChangeDescription(index,e)}></input>
+
+            {
+                index ? 
+                <>
+                  <button type="button"  className="button remove" onClick={() => removeDescriptionField(index)}>Remove</button> 
+                  <br></br>
+                  </>
+                : null
+              }
+
+            </>
+                )
+              })}
+         
+
+            <div className="button-section">
+              <button className="button add" type="button" onClick={() => addDescriptionField()}>Add Description</button>
+          </div>
             <br></br>
 
 
