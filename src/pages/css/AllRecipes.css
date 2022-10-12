@@ -50,3 +50,7 @@
 .ingredientes h5:last-child{
     border-right: none;
 }
+
+.tabs-tags{
+    justify-content: flex-start;
+}
