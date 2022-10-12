@@ -94,7 +94,7 @@ return (
               {element.ingredientes.map((items, index) => {
                 return (
                   <div className="ingredientes">
-                    {items.map((subItems, sIndex) => {
+                    {items.slice(0,3).map((subItems, sIndex) => {
                       return <h5>{subItems.ingrediente}</h5>;
                     })}
                   </div>
@@ -123,7 +123,7 @@ return (
               {element.ingredientes.map((items, index) => {
                 return (
                   <div className="ingredientes">
-                    {items.map((subItems, sIndex) => {
+                    {items.slice(0,3).map((subItems, sIndex) => {
                       return <h5>{subItems.ingrediente}</h5>;
                     })}
                   </div>
