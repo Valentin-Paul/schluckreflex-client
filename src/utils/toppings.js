@@ -1,1 +1,1 @@
-export const toppings = ["dinner", "breakfast", "lunch"]
+export const toppings = ["dinner", "breakfast", "lunch", "italian", "asian", "french", "german", "mexican", "indian", "greek"]
