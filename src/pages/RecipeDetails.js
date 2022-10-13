@@ -3,11 +3,13 @@ import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react";
 import "./css/RecipeDetails.css"
 
+
 function RecipeDetails(){
 
     const {recipeId} = useParams();
     const [recipeDetails, setRecipeDetails] = useState(null)
-    console.log(recipeId)
+    
+    
 
     useEffect(()=>{
         getRecipeDetails()
@@ -26,8 +28,8 @@ function RecipeDetails(){
         {recipeDetails === null? null 
         : (
             <div>
-            <h1 className=" is-size-3-touch is-size-3-desktop has-text-centered is-uppercase pt-2">{recipeDetails.recipeName}</h1>
-            <section className="section is-medium section-ingredientes">
+            <h1 className="section is-size-3-touch is-size-3-desktop has-text-centered is-uppercase pt-2">{recipeDetails.recipeName}</h1>
+            <section className="is-medium section-ingredientes">
             <div className="box box-ingredientes">
             <h4 className="is-size-4-touch is-size-3-desktop zutaten">Zutaten:</h4>
             <hr className="hr"/>
@@ -40,7 +42,6 @@ function RecipeDetails(){
                     return(
                         <div className="ingrediente-line ingrediente-line-left"> 
                         <h5 className="mr-3 is-size-5-touch is-size-6-desktop">{subItems.amount}</h5>
-                        
                         </div>
                     )
                 })}
@@ -67,8 +68,18 @@ function RecipeDetails(){
             </div>
             </div>
             </section>
-            
-            <p>{recipeDetails.description}</p>
+            {
+                recipeDetails.description.map((step, index)=>{
+                    return (
+                        <div className="section-step">
+                        <p className="">Schritt {index + 1}:</p>
+                        <div className="section-step-description">
+                        <p>{step}</p>
+                        </div>
+                        </div>
+                            )
+                })
+            }
             </div>
         )}
         </div>
