@@ -1,5 +1,5 @@
 .section-ingredientes{
-    padding-top: 1rem !important;
+    padding: 1rem 1.5rem!important;
     margin-top: 0;
 }
 
@@ -26,3 +26,25 @@
 .ingrediente-line-left{
     margin-left: 3vw;
 }
+
+.box{
+    box-shadow: teal 2px 2px;
+    border: solid black 1px;
+    border-radius: 25px;
+}
+
+.section{
+    padding: 0rem ;
+}
+
+.section-step{
+    margin: 1rem;
+    padding: 1rem;
+    border-bottom: solid black 1px;
+}
+
+/* .section-step-description{
+    border-radius: 25px;
+    box-shadow: black 1px 1px;
+    padding: 1rem ;
+} */
