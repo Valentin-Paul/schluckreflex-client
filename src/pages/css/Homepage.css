@@ -29,12 +29,17 @@ margin-top: 55vh;
 width: 60vw;
 height: 7vh;
 font-size: 1.1rem;
+color: teal !important;
+}
+
+.section-description{
+    padding: 3rem 0rem;
 }
 
 .homepage-description{
     font-size: 1rem;
     font-weight: 200;
-    padding: 1.5rem 1rem 0.8rem 1rem;
+    padding: 0rem 1rem 1rem 1rem;
     text-align: justify;
     color: black;
 }
@@ -42,6 +47,21 @@ font-size: 1.1rem;
 .button-überuns{
     width: 60vw;
     height: 7vh;
+    background-color: teal !important;
+}
+
+.contact-homepage{
+    padding: 2rem 0.5rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 40vh;
+}
+
+.button-contact{
+    width: 60vw;
+    height: 7vh;
+    color: teal !important;
 }
 
 .align-center{
