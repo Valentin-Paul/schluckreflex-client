@@ -1,0 +1,72 @@
+.animation-header{
+   height: 94vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+
+.schluckreflex{
+    height: 15vh;
+    font-weight: 200;
+    display: flex;
+    justify-content:center;
+    color: black;
+}
+
+.headline{
+    text-align: center;
+    font-weight: 200;
+    font-size: 1.3rem;
+    color: black;
+    margin-top: 6vh;
+}
+
+.rezepte-button{
+text-align: center;
+margin-top: 55vh;
+width: 60vw;
+height: 7vh;
+font-size: 1.1rem;
+}
+
+.homepage-description{
+    font-size: 1rem;
+    font-weight: 200;
+    padding: 1.5rem 1rem 0.8rem 1rem;
+    text-align: justify;
+    color: black;
+}
+
+.button-überuns{
+    width: 60vw;
+    height: 7vh;
+}
+
+.align-center{
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px){
+    .schluck {
+        padding-top: 0.5vh;
+        margin-left: auto;
+        font-size: 4rem ;
+        }
+    .reflex {
+        padding-top: 0.5vh;
+        margin-right: auto;
+        font-size: 4rem ;
+        }
+}
+
+@media screen and (min-width: 769px){
+    .reflex {
+        font-size: 7rem ;
+        }
+    .schluck {
+        font-size: 7rem ;
+        }
+}
+
