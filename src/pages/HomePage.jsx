@@ -3,6 +3,8 @@ import "../App.css";
 import "./css/Homepage.css"
 import MovingText from "react-moving-text"
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import * as PATHS from "../utils/paths";
 import background from "../images/herbs-homepage.jpg"
 import walnut from "../images/walnut.jpeg"
 
@@ -58,8 +60,13 @@ function HomePage() {
       </div>
       
       <p className="headline">Feinste Rezepte die dich schlucken lassen</p>
-
-      <button className="button is-primary is-light rezepte-button center">Zu den Rezepten</button>
+      <Link
+            to={PATHS.RECIPES}
+            className="button is-primary is-light rezepte-button center"
+            width="100%"
+          >
+            Zu den Rezepten
+          </Link>
       </div>
 
    
