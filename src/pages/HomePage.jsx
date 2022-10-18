@@ -4,6 +4,7 @@ import "./css/Homepage.css"
 import MovingText from "react-moving-text"
 import { useEffect, useState } from "react";
 import background from "../images/herbs-homepage.jpg"
+import walnut from "../images/walnut.jpeg"
 
 
 function HomePage() {
@@ -61,9 +62,21 @@ function HomePage() {
       <button className="button is-primary is-light rezepte-button center">Zu den Rezepten</button>
       </div>
 
-      <p className="homepage-description">Schluckreflex ist ein Food-Kollektiv aus Graz & Wien, dass euch in die Welt unseres Essens-Ateliers mitnimmt. Unser Ziel ist es, unsere kullinarischen Kreationen in die Welt zu tragen und dadurch euren Alltag zu versüßen. </p>
+   
+    <div className="section-description">
+    <p className="homepage-description">Schluckreflex ist ein Food-Kollektiv aus Graz & Wien, dass euch in die Welt unseres Essens-Ateliers mitnimmt. Unser Ziel ist es, unsere kullinarischen Kreationen in die Welt zu tragen und dadurch euren Alltag zu versüßen. </p>
       <div className="align-center">
       <button className=" button is-primary button-überuns">Über uns</button>
+      </div>
+    </div>
+    
+
+  
+      <div className="contact-homepage" style={{ backgroundImage: `url(${walnut})` }}>
+      <p className="homepage-description">Wir freuen und über Fragen, Anmerkungen, Kritik, Rezeptwünsche oder eigens kreiirte Rezepte die wir ausprobieren sollen oder einfach eine nette Nachricht.</p>
+      <div className="align-center">
+      <button className=" button is-primary is-light button-contact">Kontakt</button>
+      </div>
       </div>
       
 
