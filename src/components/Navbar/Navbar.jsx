@@ -69,7 +69,11 @@ const onClick =()=>{
               Über uns
             </Link>
 
-            <a className="navbar-item dropped">Impressum</a>
+            <Link  className="navbar-item dropped" to={PATHS.CONTACT} >
+              Kontakt
+            </Link>
+
+         
             <hr class="navbar-divider"></hr>
           </div>
 
