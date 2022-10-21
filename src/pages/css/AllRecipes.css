@@ -1,16 +1,25 @@
-.recipe-box{
-    border: black solid 1px;
-    border-radius: 10px;
-    margin: 1.4rem ;
-    color: black;
-    box-shadow: 6px 6px teal;
+.allrecipes-page{
+    background-color: #425f5745 !important;
+    min-height: 100vh;
 }
 
+.recipe-box{
+    border: black solid 1px;
+    /* border-radius: 10px; */
+    margin: 1.4rem ;
+    color: black;
+ 
+    box-shadow: 4px 4px  #383838;
+}
+
+
 .recipe-box h3{
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    font-weight: 300;
     margin: 0;
     padding: 0.5rem 0rem 0.8rem 0rem;
     text-align: center;
+
 }
 .recipe-box p{
     font-size: 0.9rem;
@@ -53,4 +62,8 @@
 
 .tabs-tags{
     justify-content: flex-start;
+}
+
+.button-toppings{
+    height: 5vh !important;
 }

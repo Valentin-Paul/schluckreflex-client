@@ -6,7 +6,6 @@ nav {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  background:teal;
   font-weight: 500;
   border-bottom: black solid 1px;
 }
@@ -14,7 +13,8 @@ nav {
 .navbar {
   height: 3.5rem !important;
   min-height: unset !important;
-  background-color: teal;
+  color: white !important;
+  background-color: #425F57;
 }
 
 .dropped{
@@ -84,4 +84,12 @@ nav {
 
 .navbar-menu{
   align-content: center !important;
+}
+
+.navbar-brand a.navbar-item:hover{
+  color: black !important;
+}
+
+.button-newrecipe{
+  background-color: #425F57 !important;
 }
