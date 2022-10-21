@@ -10,7 +10,8 @@
     "react-dom": "^18.2.0",
     "react-moving-text": "^0.0.7",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^5.0.1",
+    "react-scroll-motion": "^0.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
