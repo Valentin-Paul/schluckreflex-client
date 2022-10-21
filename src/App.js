@@ -12,6 +12,8 @@ import Homepage from './pages/HomePage'
 import CreateRecipes from "./pages/CreateRecipes";
 import AllRecipes from "./pages/AllRecipes"
 import RecipeDetails from "./pages/RecipeDetails";
+import AboutUs from "./pages/AboutUs";
+
 
 
 
@@ -91,6 +93,7 @@ export default function App() {
         <Route path="/postrecipe" element={<CreateRecipes />} />
         <Route path="recipes" element={<AllRecipes recipes={recipes} callbackFetch={fetchRecipes}/>} />
         <Route path="recipes/:recipeId" element={<RecipeDetails/>}/>
+        <Route path="/aboutus" element={<AboutUs/>}/>
 
       </Routes>
     </div>
