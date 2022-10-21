@@ -3,13 +3,23 @@ import { Link } from "react-router-dom";
 import "./Navbar.css";
 import * as PATHS from "../../utils/paths";
 import * as CONSTS from "../../utils/consts";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const Navbar = (props) => {
   const [isActive, setisActive] = useState(false);
 
+
+const onClick =()=>{
+  if(isActive === true){
+  document.addEventListener('click', setisActive(false));
+  }
+}
+
+
+
+
   return (
-    <>
+    <div onClick={onClick}>
       <nav
         class="navbar navbar-start"
         role="navigation"
@@ -54,12 +64,11 @@ const Navbar = (props) => {
         </a>
 
         <div className={`navbar-menu ${isActive ? "is-active" : ""}`}>
-          {/* <a className="navbar-link">
-      Mehr
-    </a> */}
-
           <div class="navbar-start ">
-            <a className="navbar-item dropped">Über uns</a>
+            <Link to={PATHS.ABOUTUS} className="navbar-item dropped">
+              Über uns
+            </Link>
+
             <a className="navbar-item dropped">Impressum</a>
             <hr class="navbar-divider"></hr>
           </div>
@@ -68,7 +77,10 @@ const Navbar = (props) => {
             <div className="buttons dropped-buttons">
               {props.user ? (
                 <>
-                  <Link to={PATHS.POSTRECIPE} className="button is-primary">
+                  <Link
+                    to={PATHS.POSTRECIPE}
+                    className="button is-primary button-newrecipe"
+                  >
                     + Rezept
                   </Link>
                   <button
@@ -92,7 +104,7 @@ const Navbar = (props) => {
           </div>
         </div>
       </nav>
-    </>
+    </div>
   );
 };
 
