@@ -1,0 +1,35 @@
+.about-us{
+    padding: 0rem 0rem ;
+    text-align: justify;
+}
+
+.about-us h1 {
+    font-size: 3.5rem;
+    font-weight: 200;
+    text-align: center;
+    color: white;
+    padding-top: 0.5rem;
+}
+
+.about-us p {
+    font-size: 1rem;
+    font-weight: 250;
+    padding: 0.8rem 1rem;
+}
+
+.about-us-img{
+    height: 40vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.about-us-second-img{
+    padding: 0rem 1rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 25vh;
+    width: 100vw;
+    object-fit: cover;
+}
