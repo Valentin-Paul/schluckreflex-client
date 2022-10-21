@@ -8,7 +8,7 @@ function CreateRecipes() {
 
     const[recipeName, setRecipeName] = useState('')
     const[ingredientes, setIngredientes] = useState([{amount: '', ingrediente: ''}])
-    const[description, setDescription] = useState([])
+    const[description, setDescription] = useState([''])
     const[tags, setTags] = useState([])
     const[errorMessage, setErrorMessage] = useState(undefined);
     const [checkedTag, setCheckedTag] = useState([]
@@ -96,18 +96,21 @@ function CreateRecipes() {
         <div className="create-recipes-page">
         {errorMessage ? <p className="error-message">{errorMessage}</p> : ''}
         <form onSubmit={handlePostSubmit}>
-            <label>Name: </label>
-            <input type="text" name="recipeName" value={recipeName} onChange={e=>setRecipeName(e.target.value)}></input>
-            <br></br>
-
+        <div className="ingrediente-box">
+        <label className="label ">Name: </label>
+            <input className="input name-input" type="text" name="recipeName" value={recipeName} onChange={e=>setRecipeName(e.target.value)}></input>
+            
+        </div>
+            
+            <div className="ingrediente-box field">
         {ingredientes.map((element, index)=> {
             return(
-            <div className="ingrediente-box">
-            <label>Ingredients: </label>
-            <input type="text" name="ingrediente" value={element.ingrediente || ""} onChange={e => handleChangeIngrediente(index, e)} ></input>
-            <label>Amount: </label>
-            <input type="text" name="amount" value={element.amount || ""} onChange={e => handleChangeIngrediente(index, e)} ></input>
-           
+           <>
+            <label className="label">Ingrediente: </label>
+            <input className="input" type="text" name="ingrediente" value={element.ingrediente || ""} onChange={e => handleChangeIngrediente(index, e)} ></input>
+            <label className="label">Amount: </label>
+            <input className="input" type="text" name="amount" value={element.amount || ""} onChange={e => handleChangeIngrediente(index, e)} ></input>
+            
             {
                 index ? 
                 <>
@@ -116,47 +119,55 @@ function CreateRecipes() {
                   </>
                 : null
               }
-             
-              </div>
+             <hr></hr>
+             </>
         )})}
-
         <div className="button-section">
-              <button className="button add" type="button" onClick={() => addIngredienteField()}>Add</button>
+              <button className="button add" type="button" onClick={() => addIngredienteField()}>Add Ingrediente</button>
           </div>
+        </div>
 
+       
+              <div className="ingrediente-box">
               {description.map((step, index)=>{
                 return(
                   <>
                  
-                <label>Schritt {index + 1}: </label>
-            <input type="text" name="description" value={step || ""} onChange={e=> handleChangeDescription(index,e)}></input>
-
+                <label className="label">Schritt {index + 1}: </label>
+            <input className="textarea" type="textarea" name="description" value={step || ""} onChange={e=> handleChangeDescription(index,e)}></input>
+               
             {
                 index ? 
                 <>
                   <button type="button"  className="button remove" onClick={() => removeDescriptionField(index)}>Remove</button> 
-                  <br></br>
+                 
                   </>
                 : null
               }
+              <hr></hr>
 
             </>
                 )
               })}
-         
 
-            <div className="button-section">
+                <div className="button-section">
               <button className="button add" type="button" onClick={() => addDescriptionField()}>Add Description</button>
           </div>
+              </div>
+              
+         
+
+          
             <br></br>
 
-
-            {toppings.map(( name , index) => {
+              <div className="toppings">
+              {toppings.map(( name , index) => {
           return (
             <li key={index}>
               <div className="toppings-list-item">
                 <div className="left-section">
                   <input
+                  className="checkbox"
                     type="checkbox"
                     id={`custom-checkbox-${index}`}
                     name={name}
@@ -164,12 +175,14 @@ function CreateRecipes() {
                     checked={checkedTag[index]}
                     onChange={() => handleOnChange(index)}
                   />
-                  <label htmlFor={`custom-checkbox-${index}`}>{name}</label>
+                  <label className="checkbox" htmlFor={`custom-checkbox-${index}`}>{name}</label>
                 </div>
               </div>
             </li>
           );
         })}
+              </div>
+            
 
         <button className="button submit" type="submit">Submit</button>
 

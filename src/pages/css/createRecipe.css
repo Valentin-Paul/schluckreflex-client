@@ -1,5 +1,11 @@
 * {box-sizing: border-box;}
 
+.create-recipes-page{
+  background-color: lightgray;
+  padding: 1rem;
+  text-align: center;
+}
+
   .form-inline {  
     display: flex;
     flex-flow: row wrap;
@@ -35,7 +41,41 @@
 
   .remove {
     background-color: rgb(192, 53, 53);
+ margin-top: 0.5rem;
   }
   .remove:hover {
     background-color: rgb(187, 43, 43);
+  }
+
+  .ingrediente-box{
+ padding:  1rem;
+ border: black solid 1px;
+ box-shadow: 2px 2px black;
+ margin: 1rem 0rem;
+  }
+
+  .name-input{
+margin-bottom: 0.5rem;
+  }
+
+  .toppings{
+    list-style-type: none;
+    font-size: 1.5rem;
+    padding-left: 30vw;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: black solid 1px;
+    box-shadow: 2px 2px black;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .toppings label{
+    padding-left: 0.5rem;
+  }
+
+  .submit{
+    margin-top: 1rem;
+    background-color: green;
   }
