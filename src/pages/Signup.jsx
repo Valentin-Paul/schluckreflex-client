@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { signup } from "../services/auth";
 import { useNavigate } from "react-router-dom";
-import "./auth.css";
+import "./css/auth.css";
 import * as PATHS from "../utils/paths";
 import * as USER_HELPERS from "../utils/userToken";
 
