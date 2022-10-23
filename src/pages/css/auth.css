@@ -1,4 +1,5 @@
-form.auth__form {
+.auth-forms {
+  text-align: center;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -10,4 +11,29 @@ form.auth__form {
 button.button__submit {
   max-width: 100px;
   margin: 1em auto;
+}
+
+.auth-forms h1{
+  font-size: 2.5rem;
+  font-weight: 300;
+  padding: 1rem 0rem;
+}
+
+.auth-forms label{
+  font-size: 1.2rem;
+}
+
+.auth-forms input{
+  height: 4vh;
+}
+
+.auth-forms button{
+  height: 4vh;
+  width: 40vw;
+  background-color: #425F57;
+ border: none;
+  box-shadow: 2px 2px black;
+  font-weight: 300;
+  font-size: 1.1rem;
+  color: white;
 }

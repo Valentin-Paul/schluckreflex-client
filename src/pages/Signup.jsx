@@ -42,8 +42,9 @@ export default function Signup({ authenticate }) {
 
   return (
     <div>
-      <h1>Sign Up</h1>
-      <form onSubmit={handleFormSubmission} className="auth__form">
+     
+      <form onSubmit={handleFormSubmission} className="auth__form auth-forms">
+       <h1>Sign Up</h1>
         <label htmlFor="input-username">Username</label>
         <input
           id="input-username"
@@ -75,7 +76,7 @@ export default function Signup({ authenticate }) {
         )}
 
         <button className="button__submit" type="submit">
-          Submit
+          Sign Up
         </button>
       </form>
     </div>
