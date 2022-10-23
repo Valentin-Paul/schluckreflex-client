@@ -3,6 +3,10 @@
     min-height: 100vh;
 }
 
+.container h1{
+    padding: 0rem 1rem;
+}
+
 .section-ingredientes{
     padding: 1rem 1.5rem!important;
     margin-top: 0;
