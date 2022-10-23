@@ -1,10 +1,15 @@
 import "./css/aboutus.css"
 import chefCooking from "../images/chef-cooking.jpg"
 import chefGarnishing from "../images/chef-garnishing.jpg"
+import { useEffect } from "react"
 
 
 function AboutUs(){
 
+
+    useEffect(()=>{
+            window.scrollTo(0, 0)
+    }, [])
 
     return(
         <div className="about-us">
