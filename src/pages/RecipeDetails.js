@@ -13,6 +13,7 @@ function RecipeDetails(){
 
     useEffect(()=>{
         getRecipeDetails()
+            window.scrollTo(0, 0)
     }, [recipeId])
 
     const getRecipeDetails = ()=>{
@@ -28,7 +29,7 @@ function RecipeDetails(){
         {recipeDetails === null? null 
         : (
             <div>
-            <h1 className="section is-size-3-touch is-size-3-desktop has-text-centered is-uppercase pt-2">{recipeDetails.recipeName}</h1>
+            <h1 className="section is-size-3-touch is-size-3-desktop has-text-centered is-uppercase pt-3">{recipeDetails.recipeName}</h1>
             <section className="is-medium section-ingredientes">
             <div className="box box-ingredientes">
             <h4 className="is-size-4-touch is-size-3-desktop zutaten">Zutaten:</h4>
