@@ -1,0 +1,32 @@
+.contact-background{
+    height: 93vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: justify;
+}
+
+.contact-background h1{
+        font-size: 3.5rem;
+        font-weight: 200;
+        text-align: center;
+        color: black;
+        padding-top: 0.5rem;
+}
+
+.contact-background p{
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+.contact-icons{
+    display: flex;
+    justify-content:space-evenly;
+    padding-top: 2rem;
+}
+
+.icon{
+    height: 4vh;
+    width: auto;
+    margin: 0rem;
+}
