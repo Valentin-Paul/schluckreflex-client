@@ -87,7 +87,10 @@ function HomePage() {
       <h3 className="über-uns-header">Über uns</h3>
     <p className="homepage-description">Schluckreflex ist ein Food-Kollektiv aus Graz & Wien, dass euch in die Welt unseres Essens-Ateliers mitnimmt. Unser Ziel ist es, unsere kullinarischen Kreationen in die Welt zu tragen und dadurch euren Alltag zu versüßen. </p>
       <div className="align-center">
-      <button className=" button is-primary button-überuns">mehr</button>
+      <Link to={PATHS.ABOUTUS} className=" button is-primary button-überuns">
+        mehr
+      </Link>
+     
       </div>
     </div>
       </span>
@@ -101,7 +104,10 @@ function HomePage() {
      <h3 className="kontakt-header">Kontakt</h3>
       <p className="homepage-description homepage-contact">Wir freuen und über Fragen, Anmerkungen, Kritik, Rezeptwünsche oder eigens kreiirte Rezepte die wir ausprobieren sollen oder einfach eine nette Nachricht.</p>
       <div className="align-center">
-      <button className=" button is-primary is-light button-contact">Nachricht</button>
+
+      <Link to={PATHS.CONTACT} className=" button is-primary is-light button-contact" >
+        Nachricht
+      </Link>
       </div>
       </div>
   
