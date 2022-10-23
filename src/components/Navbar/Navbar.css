@@ -32,6 +32,12 @@ nav {
   font-weight: 300;
 }
 
+.navbar-rezepte:hover{
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 300;
+}
+
 .is-active .dropped{
   width: 100vw;
 }
@@ -45,7 +51,7 @@ nav {
 
 
 .navLink {
- color: white;
+ color: white !important;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.2s ease-in-out;
@@ -86,8 +92,8 @@ nav {
   align-content: center !important;
 }
 
-.navbar-brand a.navbar-item:hover{
-  color: black !important;
+ .navbar-item:hover{
+  color: white !important;
 }
 
 .button-newrecipe{
