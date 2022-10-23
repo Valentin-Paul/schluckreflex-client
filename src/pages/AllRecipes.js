@@ -57,7 +57,7 @@ const handleButton = (event) => {
 };
 
 return (
-  <>
+  <div className="allrecipes-page">
     <p className="tabs tabs-tags">
       {toppings.map((tag, num) => {
         return (
@@ -69,10 +69,10 @@ return (
             }}
             style={{
               backgroundColor:
-                buttonClicked.includes(num) === true ? "teal" : "grey",
+                buttonClicked.includes(num) === true ? "#425F57" : "grey",
               color: buttonClicked.includes(num) === true ? "white" : "black",
             }}
-            className="button is-primary is-light m-1"
+            className="button is-primary is-light m-1 mt-2 button-toppings"
           >
             {tag}
           </button>
@@ -140,7 +140,7 @@ return (
     )
        
     }
-  </>
+  </div>
 );
 }
 
