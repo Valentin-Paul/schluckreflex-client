@@ -33,3 +33,24 @@
     width: 100vw;
     object-fit: cover;
 }
+
+@media screen and (min-width: 768px) {
+    .text-aboutus {
+        padding: 3rem !important;
+    }
+
+    .about-us-second-img{
+        margin: 0rem !important;
+        padding: 0rem !important;
+        height: 40vh;
+    }
+
+    .about-us-img{
+        height: 55vh;
+    }
+
+    .about-us h1{
+        padding-top: 5vh;
+    }
+
+}
