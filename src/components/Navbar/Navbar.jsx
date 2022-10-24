@@ -28,7 +28,6 @@ const onClick =()=>{
         <div class="navbar-brand">
           <a
             class="navbar-item"
-            href="https://bulma.io"
             width="112"
             height="28"
             color="black"
