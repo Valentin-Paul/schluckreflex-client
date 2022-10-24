@@ -100,7 +100,7 @@ box-shadow: 4px 4px #383838;
     height: 7vh;
     color: white !important;
     background-color: #425F57 !important;
-    margin-top: 1rem;
+    margin-top: 2rem;
     font-size: 1.5rem;
     font-weight: 300;
     border-radius: 0 !important;
@@ -124,48 +124,7 @@ box-shadow: 4px 4px #383838;
     padding-top: 1vh;
 }
 
-@media only screen and (max-width: 768px){
-
-
-
-
-
-
-    /* .future-cop {
-        height: 15vh;
-        
-      }
-      
-      .future {
-        font-family: 'Mr Dafoe', cursive;
-        font-size: 3rem;
-        position: relative;
-        bottom: 35px;
-        margin-bottom: 0;
-        color: #781c69d7;
-        -webkit-text-fill-color: #781c69f4;
-        text-shadow: -2px -2px 0 #FFBAF2;
-        -webkit-filter: drop-shadow(3px 3px 1px #441F62);
-        -webkit-transform: skew(-5deg,-5deg);
-        font-weight: normal;
-        z-index: 2;
-      
-      }
-      
-      .cop {
-        font-family: 'Monoton', cursive;
-        font-size: 3.8rem;
-        line-height: 1;
-        margin: 0;
-        padding-top: 1rem;
-     
-        /* font-weight: normal; */
-   
-      
-      
-  
-
-
+@media only screen and (max-width: 767px){
 
     .schluck {
         padding-top: 0.5vh;
@@ -182,13 +141,37 @@ box-shadow: 4px 4px #383838;
         }
 }
 
-@media screen and (min-width: 769px){
+@media screen and (min-width: 768px) {
+
+    .homepage-description {
+        padding: 0rem 8rem !important;
+        /* margin: 0rem 12rem !important; */
+    }
     .reflex {
-        font-size: 7rem ;
+        font-size: 6rem ;
         }
     .schluck {
-        font-size: 7rem ;
+        font-size: 6rem ;
         }
+    .headline{
+        margin-top: 6vh;
+    }
+    
+    .rezepte-button{
+        margin-top: 45vh;
+    }
+
+    .kontakt-header  {
+        margin: 2rem 0rem !important;
+    }
+
+    .über-uns-header{
+        margin: 2rem 0rem !important;
+    }
+
+    .contact-homepage{
+        height: 100vh !important;
+    }
 }
 
 
