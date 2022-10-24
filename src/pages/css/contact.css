@@ -6,17 +6,26 @@
     text-align: justify;
 }
 
-.contact-background h1{
+.contact-content{
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    color: black;
+    width: 90vw;
+    text-align: justify;
+}
+
+.contact-content h1{
         font-size: 3.5rem;
         font-weight: 200;
         text-align: center;
         color: black;
-        padding-top: 0.5rem;
+        padding-bottom: 1rem;
 }
 
-.contact-background p{
-    padding: 1rem;
-    font-size: 1.1rem;
+.contact-content p{
+
+    font-size: 1.2rem;
 }
 
 .contact-icons{
@@ -29,4 +38,31 @@
     height: 4vh;
     width: auto;
     margin: 0rem;
+}
+
+@media screen and (min-width: 768px) {
+    .contact-content{
+        position: absolute;
+        top: 15%;
+        left: 15%;
+        color: black;
+        width: 70vw;
+    }
+
+    .contact-content h1{
+        padding: 1rem 0rem;
+    }
+
+    .contact-content p{
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+
+    .icon{
+        height: 6vh;
+    }
+
+    .contact-background{
+        opacity: 0.6;
+    }
 }

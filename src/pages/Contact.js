@@ -6,7 +6,10 @@ import mail from "../images/email.png"
 function Contact (){
 
     return(
+        <>
         <div style={{ backgroundImage: `url(${contactImage})` }} className="contact-background">
+        </div>
+        <div className="contact-content">
         <h1>Kontakt</h1>
         <p>Wenn du mehr über Schluckreflex, das Team oder Rezepte hast, bzw. du uns Fragen, Anmerkungen, Kritik, Rezeptwünsche oder Fanpost schicken möchtest, kontaktiere uns einfach über Instagram oder Mail. Wir freuen uns über Eure Nachrichten.</p>
         <div className="contact-icons">
@@ -18,8 +21,8 @@ function Contact (){
         <img className="icon" src={mail}></img>
         </a>
         </div>
-    
         </div>
+        </>
     )
 }
 
