@@ -67,3 +67,34 @@
 .button-toppings{
     height: 5vh !important;
 }
+
+@media screen and (min-width: 768px) {
+
+    .all-boxes{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .all-boxes:last-child{
+        justify-content: flex-start;
+    }
+
+    .recipe-box{
+        width: 45vw ;
+    }
+
+    .tabs-tags{
+        padding-top: 0.5rem;
+        margin-bottom: 0rem !important;
+    }
+
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    .recipe-box{
+        width: 40vw ;
+    }
+  }

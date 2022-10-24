@@ -80,7 +80,8 @@ return (
       })}
     </p>
 
-    {   filter[0] === undefined?
+      <div className="all-boxes">
+      {   filter[0] === undefined?
     ( props.recipes.map((element) => {
       return (
         <NavLink to={`/recipes/${element._id}`} className="recipe-link">
@@ -140,6 +141,10 @@ return (
     )
        
     }
+
+
+      </div>
+
   </div>
 );
 }
