@@ -48,8 +48,8 @@
 }
 
 .section-step{
-    margin: 1rem;
-    padding: 1rem;
+    margin: 0rem 1rem;
+    padding: 2rem 1rem ;
     border-bottom: solid black 1px;
     text-align: justify;
 }

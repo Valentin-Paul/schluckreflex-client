@@ -4,6 +4,10 @@
   padding: 0 !important;
 } */
 
+body{
+  background-color: #D1D0CD;
+}
+
 @media screen and (min-width: 768px) {
   body {
     margin: 0rem 0rem !important;
