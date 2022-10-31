@@ -27,6 +27,7 @@ export default function App() {
     axios
       .get(`${process.env.REACT_APP_SERVER_URL}/recipes`)
       .then((response)=>{
+        console.log(`${process.env.REACT_APP_SERVER_URL}/recipes`)
         setRecipes(response.data)
       })
       .catch((e)=>{console.log("error getting recipes from API ->>>", e)})
@@ -92,8 +93,8 @@ export default function App() {
 
         <Route path="/" element={<Homepage />} />
         <Route path="/postrecipe" element={<CreateRecipes />} />
-        <Route path="recipes" element={<AllRecipes recipes={recipes} callbackFetch={fetchRecipes}/>} />
-        <Route path="recipes/:recipeId" element={<RecipeDetails/>}/>
+        <Route path="/recipes" element={<AllRecipes recipes={recipes} callbackFetch={fetchRecipes}/>} />
+        <Route path="/recipes/:recipeId" element={<RecipeDetails/>}/>
         <Route path="/aboutus" element={<AboutUs/>}/>
         <Route path="/contact" element={<Contact/>}/>
 
