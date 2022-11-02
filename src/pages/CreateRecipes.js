@@ -4,6 +4,7 @@ import axios from "axios"
 import { toppings } from "../utils/toppings"
 import "./css/createRecipe.css"
 import { uploadImage } from "../components/UploadImage/UploadImage"
+import { useNavigate } from "react-router-dom"
 
 function CreateRecipes() {
 
@@ -14,7 +15,10 @@ function CreateRecipes() {
     const[errorMessage, setErrorMessage] = useState(undefined);
     const [checkedTag, setCheckedTag] = useState([]);
     const [imageUrl, setImageUrl] = useState("");
-    
+    const navigate = useNavigate()
+
+   
+   
 
     const handlePostSubmit = ((e) => {
         e.preventDefault()
@@ -26,17 +30,16 @@ function CreateRecipes() {
         requestBody,
         // { headers: { Authorization: `Bearer ${storedToken}` } }
         )
-        // .then(
-        //     setRecipeName(''),
-        //     setIngredientes(''),
-        //     setDescription(''),
-        //     setTags('')
-        // )
+        .then(
+          navigate("/recipes")
+        )
         .catch((error) => {
             const errorDescription = error.response.data;
             setErrorMessage(errorDescription);
         })
     })
+
+
 
     let handleOnChange = (position) =>{
         if(checkedTag.includes(toppings[position]) === false ) {
@@ -102,6 +105,8 @@ function CreateRecipes() {
         })
         .catch(err => console.log("Error while uploading the file: ", err));
 };
+
+
 
     return(
 
@@ -207,7 +212,7 @@ function CreateRecipes() {
               </div>
             
 
-        <button className="button submit" type="submit">Submit</button>
+        <button className="button submit" type="submit" >Submit</button>
 
             
         </form>
