@@ -3,6 +3,7 @@ import { useState } from "react"
 import axios from "axios"
 import { toppings } from "../utils/toppings"
 import "./css/createRecipe.css"
+import { uploadImage } from "../components/UploadImage/UploadImage"
 
 function CreateRecipes() {
 
@@ -11,15 +12,14 @@ function CreateRecipes() {
     const[description, setDescription] = useState([''])
     const[tags, setTags] = useState([])
     const[errorMessage, setErrorMessage] = useState(undefined);
-    const [checkedTag, setCheckedTag] = useState([]
-        // new Array(toppings.length).fill(false)
-      );
+    const [checkedTag, setCheckedTag] = useState([]);
+    const [imageUrl, setImageUrl] = useState("");
     
 
     const handlePostSubmit = ((e) => {
         e.preventDefault()
 
-        const requestBody = [recipeName, ingredientes, description, checkedTag]
+        const requestBody = [recipeName, ingredientes, description, checkedTag, imageUrl]
         console.log(requestBody)
 
         axios.post(`${process.env.REACT_APP_SERVER_URL}/postrecipe`,
@@ -89,19 +89,37 @@ function CreateRecipes() {
 
     
  
+  const handleFileUpload = (e) => {
 
+    const uploadData = new FormData();
+
+    uploadData.append("imageUrl", e.target.files[0]);
+
+    uploadImage(uploadData)
+        .then(response => {
+            console.log("response is: ", response);
+            setImageUrl(response.fileUrl);
+        })
+        .catch(err => console.log("Error while uploading the file: ", err));
+};
 
     return(
 
         <div className="create-recipes-page">
         {errorMessage ? <p className="error-message">{errorMessage}</p> : ''}
-        <form onSubmit={handlePostSubmit}>
+        <form onSubmit={handlePostSubmit} encType="multipart/form-data" >
         <div className="ingrediente-box">
         <label className="label ">Name: </label>
             <input className="input name-input" type="text" name="recipeName" value={recipeName} onChange={e=>setRecipeName(e.target.value)}></input>
             
         </div>
-            
+
+        <div className="ingrediente-box">
+      <h3 className="label">Bild:</h3>
+      <input type="file" onChange={(e) => handleFileUpload(e)} id="file-upload-button" />
+        </div>
+      
+
             <div className="ingrediente-box field">
         {ingredientes.map((element, index)=> {
             return(
@@ -181,6 +199,11 @@ function CreateRecipes() {
             </li>
           );
         })}
+
+       
+        
+       
+
               </div>
             
 
