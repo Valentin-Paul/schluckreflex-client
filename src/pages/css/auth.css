@@ -1,11 +1,13 @@
 .auth-forms {
   text-align: center;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   flex-direction: column;
   align-content: center;
   max-width: 300px;
   margin: 0 auto;
+  margin-top: 10vh;
+  height: 83vh;
 }
 
 button.button__submit {
