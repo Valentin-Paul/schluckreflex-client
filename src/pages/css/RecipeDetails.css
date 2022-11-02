@@ -57,3 +57,24 @@
 .navbar-burger{
     color: white !important;
 }
+
+.recipe-image{
+    position: relative;
+    height: 40vh;
+    width: 90vw;
+    background-repeat: no-repeat;
+    object-fit: cover;
+    overflow: hidden;
+    margin: 0.5rem 0rem 1rem 0rem;  
+}
+
+.minor-infos{
+    display: flex;
+    justify-content: space-between;
+    font-weight: 300;
+    font-size: 1.1rem;
+    margin: 0vh 8vw;
+}
+
+
+
