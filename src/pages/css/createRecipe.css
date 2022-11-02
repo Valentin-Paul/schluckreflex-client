@@ -60,7 +60,7 @@ margin-bottom: 0.5rem;
 
   .toppings{
     list-style-type: none;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     padding-left: 30vw;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -78,4 +78,14 @@ margin-bottom: 0.5rem;
   .submit{
     margin-top: 1rem;
     background-color: green;
+  }
+
+  input::file-selector-button{
+    padding: 0.7rem;
+    background-color: #425F57;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    margin-left: 5vw;
   }
