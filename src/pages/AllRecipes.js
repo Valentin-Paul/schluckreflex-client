@@ -11,14 +11,10 @@ const [buttonClicked, setButtonClicked] = useState([])
 const [filteredRecipes, setFilteredRecipes] = useState([])
 
 
-// useEffect(()=>{
-// filter.map((filterElement)=>{
-// return props.recipes.map((recipe)=>{
-//     return ((recipe.tags.includes(filterElement) === true && filteredRecipes.includes(recipe) === false)? filteredRecipes.push(recipe) : null)
-// })
-// })
-// console.log(filteredRecipes)
-// }, [filter])
+
+useEffect(()=>{
+  props.callbackFetch()
+},[props])
 
 
 const getDate = (element) => {
