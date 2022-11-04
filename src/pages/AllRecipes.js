@@ -14,7 +14,7 @@ const [filteredRecipes, setFilteredRecipes] = useState([])
 
 useEffect(()=>{
   props.callbackFetch()
-},[props])
+},[])
 
 
 const getDate = (element) => {

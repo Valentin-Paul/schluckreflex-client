@@ -94,7 +94,7 @@ export default function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/postrecipe" element={<CreateRecipes />} />
         <Route path="/recipes" element={<AllRecipes recipes={recipes} callbackFetch={fetchRecipes}/>} />
-        <Route path="/recipes/:recipeId" element={<RecipeDetails/>}/>
+        <Route path="/recipes/:recipeId" element={<RecipeDetails callbackFetch={fetchRecipes}/>}/>
         <Route path="/aboutus" element={<AboutUs/>}/>
         <Route path="/contact" element={<Contact/>}/>
 
