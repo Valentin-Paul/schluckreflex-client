@@ -2,24 +2,44 @@ import axios, { Axios } from "axios"
 import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react";
 import "./css/RecipeDetails.css"
+import * as USER_HELPERS from "../utils/userToken"
+import { useNavigate } from "react-router-dom"
 
 
-function RecipeDetails(){
+
+function RecipeDetails(props){
 
     const {recipeId} = useParams();
     const [recipeDetails, setRecipeDetails] = useState(null)
+    const [token, setToken] = useState(null)
+    const navigate = useNavigate()
     
     
 
     useEffect(()=>{
         getRecipeDetails()
-            window.scrollTo(0, 0)
-    }, [recipeId])
+        window.scrollTo(0, 0)
+        const userToken = USER_HELPERS.getUserToken()
+        setToken(userToken);
+        console.log(token)
+        
+    }, [token])
+
+   
 
     const getRecipeDetails = ()=>{
         axios
         .get(`${process.env.REACT_APP_SERVER_URL}/recipes/${recipeId}`)
         .then((response)=> setRecipeDetails(response.data))
+        .catch((e)=>{console.log("error getting recipe details --->", e)})
+    }
+
+    const deleteRecipe = ()=>{
+        axios.delete(`${process.env.REACT_APP_SERVER_URL}/recipes/${recipeId}`)
+        .then((response)=> console.log(response.data))
+        .then(navigate("/recipes"))
+        .then(props.fetchRecipes())
+        
         .catch((e)=>{console.log("error getting recipe details --->", e)})
     }
 
@@ -117,6 +137,14 @@ function RecipeDetails(){
             }
             </div>
         )}
+
+        { 
+            (token === null)? null :
+            <div className="align-center">
+            <button className="button remove" onClick={deleteRecipe} >Delete Recipe</button>
+            </div>
+        }
+        
         </div>
         
     
