@@ -76,5 +76,11 @@
     margin: 0vh 8vw;
 }
 
+.details-button{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 0rem;
+}
+
 
 
