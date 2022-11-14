@@ -138,12 +138,22 @@ function RecipeDetails(props){
             </div>
         )}
 
-        { 
+            <div className="details-button">
+            { 
             (token === null)? null :
             <div className="align-center">
             <button className="button remove" onClick={deleteRecipe} >Delete Recipe</button>
             </div>
         }
+
+        { 
+            (token === null)? null :
+            <div className="align-center">
+            <button className="button"  onClick={()=> navigate(`/recipes/${recipeId}/update`)}>Update Recipe</button>
+            </div>
+        }
+            </div>
+       
         
         </div>
         
