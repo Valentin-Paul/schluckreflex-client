@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import LoadingComponent from "./components/Loading";
 import Navbar from "./components/Navbar/Navbar";
 import { getLoggedIn, logout } from "./services/auth";
 import routes from "./config/routes";
 import * as USER_HELPERS from "./utils/userToken";
 import axios from "axios";
+import * as PATHS from "./utils/paths";
 
 
 import Homepage from './pages/HomePage'
@@ -98,7 +99,7 @@ export default function App() {
         <Route path="/recipes/:recipeId" element={<RecipeDetails callbackFetch={fetchRecipes}/>}/>
         <Route path="/aboutus" element={<AboutUs/>}/>
         <Route path="/contact" element={<Contact/>}/>
-        <Route path="/recipes/:recipeId/update" element={<UpdateRecipe/>} />
+        <Route path="/recipes/:recipeId/update" element={user? <UpdateRecipe/> : <Navigate to={PATHS.LOGINPAGE} replace />} />
 
       </Routes>
     </div>
