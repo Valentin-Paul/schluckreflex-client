@@ -18,6 +18,6 @@ body{
 
 @media screen and (min-width: 1200px) {
   body {
-    margin: 0vh 6vw !important;
+    padding: 0vh 6vw !important;
   }
 }
