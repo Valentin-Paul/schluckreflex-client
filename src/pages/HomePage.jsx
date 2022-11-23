@@ -10,6 +10,7 @@ import * as PATHS from "../utils/paths";
 import background from "../images/herbs-homepage.jpg"
 import walnut from "../images/walnut.jpeg"
 import arrow from "../images/up-arrow.png"
+import chilli from "../images/chili.png"
 
 
 function HomePage() {
@@ -82,18 +83,20 @@ function HomePage() {
     
     <ScrollPage>
     <Animator animation={FadeUp}>
-      <span> 
-      <div className="section-description">
+    
+      <div className="section-description align-center">
       <h3 className="über-uns-header">Über uns</h3>
-    <p className="homepage-description">Schluckreflex ist ein Food-Kollektiv aus Graz & Wien, dass euch in die Welt unseres Essens-Ateliers mitnimmt. Unser Ziel ist es, unsere kullinarischen Kreationen in die Welt zu tragen und dadurch euren Alltag zu versüßen. </p>
+    <p className="homepage-description">Schluckreflex ist ein Food-Kollektiv aus Graz & Wien, dass euch in die Welt unseres Essens-Ateliers mitnimmt. Unser Ziel ist es, unsere kullinarischen Kreationen in die Welt zu tragen und dadurch euren Alltag zu versüßen. Zusammen als Team arbeiten wir täglich in unseren Food-Studio daran die Geschmäcker aus allen Teilen der Welt zu kombinieren und neue Essens-Kompositionen zu gestalten  </p>
+     <img src={chilli} className="chilli"></img>
       <div className="align-center">
+     
       <Link to={PATHS.ABOUTUS} className=" button is-primary button-überuns">
         mehr
       </Link>
      
       </div>
     </div>
-      </span>
+  
       
     </Animator>
     </ScrollPage>
@@ -102,7 +105,7 @@ function HomePage() {
    
      <div className="contact-homepage" style={{ backgroundImage: `url(${walnut})` }}>
      <h3 className="kontakt-header">Kontakt</h3>
-      <p className="homepage-description homepage-contact">Wir freuen und über Fragen, Anmerkungen, Kritik, Rezeptwünsche oder eigens kreiirte Rezepte die wir ausprobieren sollen oder einfach eine nette Nachricht.</p>
+      <p className="homepage-description homepage-contact">Wir freuen und über Fragen, Anmerkungen, Kritik, Rezeptwünsche oder eigens kreiirte Rezepte die wir ausprobieren sollen oder einfach eine nette Nachricht. Folge uns gerne auf Instagram und empfehle uns deinen Freunden, Verwandten und Bekannten weiter. </p>
       <div className="align-center">
 
       <Link to={PATHS.CONTACT} className=" button is-primary is-light button-contact" >
