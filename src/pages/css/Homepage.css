@@ -3,7 +3,7 @@
 .animation-header{
    
    height: 95vh;
-    width: 100vw;
+    width: 88vw;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -124,6 +124,11 @@ box-shadow: 4px 4px #383838;
     padding-top: 1vh;
 }
 
+.chilli{
+    height: 10vh;
+   margin: 4vh 0vw 0vh 0vw;
+}
+
 @media only screen and (max-width: 767px){
 
     .schluck {
@@ -139,6 +144,8 @@ box-shadow: 4px 4px #383838;
         font-size: 4rem ;
 
         }
+
+ 
 }
 
 @media screen and (min-width: 768px) {
@@ -163,15 +170,32 @@ box-shadow: 4px 4px #383838;
 
     .kontakt-header  {
         margin: 2rem 0rem !important;
+        font-size: 4rem;
     }
 
     .über-uns-header{
         margin: 2rem 0rem !important;
+        font-size: 4rem;
     }
 
     .contact-homepage{
         height: 100vh !important;
     }
+
+    .section-description{
+        height: 100vh !important;
+    }
 }
 
 
+
+
+@media screen and (min-width: 1200px) {
+   .animation-header{
+    width: 88vw;
+   }
+
+   .to-top{
+    width: 88vw;
+   }
+  }
