@@ -145,7 +145,27 @@ box-shadow: 4px 4px #383838;
 
         }
 
+        .über-uns-header{
+            margin: -2rem 0rem !important;
+            font-size: 4rem;
+        }
+
+        .button-überuns{
+            margin-top: 2vh;
+        }
+
+        .chilli{
+            height: 0vh;
+            margin: 0;
+        }
+
+        .animation-header{
+            width: 100vw;
+           }
+
+     
  
+      
 }
 
 @media screen and (min-width: 768px) {
