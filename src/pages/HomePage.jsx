@@ -37,7 +37,7 @@ function HomePage() {
 
   }
   return (
-<div className="App">
+<div className="homepage">
     <ScrollContainer>
     <ScrollPage> 
     <a name="top"></a>
