@@ -17,6 +17,29 @@
   background-color: #425F57;
 }
 
+a.navbar-item:focus {
+  background-color: transparent !important;
+  color: white;
+}
+a.navbar-item:focus-within{
+  background-color: transparent !important;
+  color: white;
+}
+
+.navLink:focus{
+  background-color: #425F57;
+}
+
+.navbar-brand:focus{
+  background-color: #425F57;
+}
+
+.Logo:focus .Logo:focus-within{
+  background-color: #425F57;
+}
+
+
+
 .dropped{
   /* width: auto !important; */
   text-align: center;
