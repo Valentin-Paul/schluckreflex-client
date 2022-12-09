@@ -88,11 +88,14 @@ export default function App() {
   return (
     <div className="App">
       <Navbar handleLogout={handleLogout} user={user} />
-      <Routes>
+      <div className="pages">
+      <Routes >
         {routes({ user, authenticate, handleLogout }).map((route) => (
           <Route key={route.path} path={route.path} element={route.element} />
         ))}
+          
 
+         
         <Route path="/" element={<Homepage />} />
         <Route path="/postrecipe" element={<CreateRecipes />} />
         <Route path="/recipes" element={<AllRecipes recipes={recipes} callbackFetch={fetchRecipes}/>} />
@@ -100,8 +103,9 @@ export default function App() {
         <Route path="/aboutus" element={<AboutUs/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/recipes/:recipeId/update" element={user? <UpdateRecipe/> : <Navigate to={PATHS.LOGINPAGE} replace />} />
-
+       
       </Routes>
+       </div>
     </div>
   );
 }
