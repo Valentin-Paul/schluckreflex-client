@@ -13,4 +13,8 @@ code {
     monospace;
 }
 
-html {font-size: 120% !important}
+@media screen and (min-width: 768px) {
+  html {font-size: 120% !important}
+}
+
+
