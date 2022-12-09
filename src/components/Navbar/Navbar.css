@@ -2,7 +2,7 @@
 
 
 
-nav {
+.nav {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -98,4 +98,16 @@ nav {
 
 .button-newrecipe{
   background-color: #425F57 !important;
+}
+
+@media screen and (min-width: 768px) {
+  .navbar-item{
+    color: white;
+  }
+  a.navbar-item:hover{
+    background-color: #314741e0;
+  }
+  a.navbar-rezepte:hover{
+    background-color: #314741e0 !important;
+  }
 }
