@@ -6,7 +6,7 @@
 
 body{
   background-color: #D1D0CD;
-  font-size: 120%;
+ 
 }
 
 @media screen and (min-width: 768px) {
@@ -21,4 +21,6 @@ body{
   .pages {
     padding: 0vh 6vw !important;
   }
+ 
+
 }
