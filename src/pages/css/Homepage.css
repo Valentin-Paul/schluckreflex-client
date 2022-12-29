@@ -163,7 +163,9 @@ box-shadow: 4px 4px #383838;
             width: 100vw;
            }
 
-     
+     .homepage-description {
+        font-size: 1.2rem;
+     }
  
       
 }
